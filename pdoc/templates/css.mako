@@ -4,6 +4,7 @@
     padding: 0;
     min-height: 100%;
   }
+
   body {
     background: #fff;
     font-family: "Source Sans Pro", "Helvetica Neueue", Helvetica, sans;
@@ -11,6 +12,7 @@
     font-size: 16px;
     line-height: 1.6em;
   }
+
   #content {
     width: 70%;
     max-width: 850px;
@@ -18,14 +20,16 @@
     padding: 30px 60px;
     border-left: 1px solid #ddd;
   }
+
   #sidebar {
     width: 25%;
     float: left;
     padding: 30px;
     overflow: hidden;
   }
+
   #nav {
-    font-size: 130%;
+    font-size: 1.3rem;
     margin: 0 0 15px 0;
   }
 
@@ -34,42 +38,44 @@
     position: fixed;
     bottom: 5px;
     left: 5px;
-    font-size: .85em;
+    font-size: 0.85rem;
     text-transform: uppercase;
   }
 
   #footer {
-    font-size: .75em;
+    font-size: 0.75rem;
     padding: 5px 30px;
     border-top: 1px solid #ddd;
     text-align: right;
   }
-    #footer p {
-      margin: 0 0 0 30px;
-      display: inline-block;
-    }
+
+  #footer p {
+    margin: 0 0 0 30px;
+    display: inline-block;
+  }
 
   h1, h2, h3, h4, h5 {
     font-weight: 300;
   }
+
   h1 {
-    font-size: 2.5em;
-    line-height: 1.1em;
-    margin: 0 0 .50em 0;
+    font-size: 2.5rem;
+    line-height: 1.1rem;
+    margin: 0 0 0.50rem 0;
   }
 
   h2 {
-    font-size: 1.75em;
-    margin: 1em 0 .50em 0;
+    font-size: 2rem;
+    margin: 1rem 0 0.50rem 0;
   }
 
   h3 {
-    margin: 25px 0 10px 0;
+    margin: 1.5rem 0 0.625rem 0;
   }
 
   h4 {
     margin: 0;
-    font-size: 105%;
+    font-size: 1.05rem;
   }
 
   a {
@@ -83,16 +89,15 @@
     transition: color .3s ease-in-out;
   }
 
-  pre, code, .mono, .name {
-    font-family: "Ubuntu Mono", "Cousine", "DejaVu Sans Mono", monospace;
-  }
-
   .title .name {
     font-weight: bold;
   }
+
   .section-title {
-    margin-top: 2em;
+    margin-top: 1.75rem;
+    padding: 0.875rem 0; 
   }
+
   .ident {
     color: #900;
   }
@@ -105,153 +110,163 @@
     background: #fefefe;
     border: 1px solid #ddd;
     box-shadow: 2px 2px 0 #f3f3f3;
-    margin: 0 30px;
-    padding: 15px 30px;
+    margin: 0 1.875rem;
+    padding: 0.75rem 0.75rem;
   }
 
   .codehilite {
-    margin: 0 30px 10px 30px;
+    margin: 0 1.875rem 0.625rem 0;
+    font-size: 0.75rem;
+    line-height: 1rem;
   }
 
-    .codehilite pre {
-      margin: 0;
-    }
-    .codehilite .err { background: #ff3300; color: #fff !important; } 
+  .codehilite pre {
+    margin: 0;
+    font-family: 'Source Code Pro';
+    font-weight: 300;
+  }
+
+  .codehilite .err {
+    background: #ff3300;
+    color: #fff !important;
+  } 
 
   table#module-list {
-    font-size: 110%;
+    font-size: 1.1rem;
   }
 
-    table#module-list tr td:first-child {
-      padding-right: 10px;
-      white-space: nowrap;
-    }
+  table#module-list tr td:first-child {
+    padding-right: 0.625rem;
+    white-space: nowrap;
+  }
 
-    table#module-list td {
-      vertical-align: top;
-      padding-bottom: 8px;
-    }
+  table#module-list td {
+    vertical-align: top;
+    padding-bottom: 0.5rem;
+  }
 
-      table#module-list td p {
-        margin: 0 0 7px 0;
-      }
+  table#module-list td p {
+    margin: 0 0 7px 0;
+  }
 
   .def {
     display: table;
   }
 
-    .def p {
-      display: table-cell;
-      vertical-align: top;
-      text-align: left;
-    }
+  .def p {
+    display: table-cell;
+    vertical-align: top;
+    text-align: left;
+  }
 
-    .def p:first-child {
-      white-space: nowrap;
-    }
+  .def p:first-child {
+    white-space: nowrap;
+  }
 
-    .def p:last-child {
-      width: 100%;
-    }
-
+  .def p:last-child {
+    width: 100%;
+  }
 
   #index {
     list-style-type: none;
     margin: 0;
     padding: 0;
   }
-    ul#index .class_name {
-      /* font-size: 110%; */
-      font-weight: bold;
-    }
-    #index ul {
-      margin: 0;
-    }
 
-  .item {
-    margin: 0 0 15px 0;
+  ul#index .class_name {
+    font-weight: bold;
   }
 
-    .item .class {
-      margin: 0 0 25px 30px;
-    }
+  #index ul {
+    margin: 0;
+  }
 
-      .item .class ul.class_list {
-        margin: 0 0 20px 0;
-      }
+  .item,
+  .item .class {
+    margin: 0 0 1rem 1rem;
+  }
 
-    .item .name {
-      background: #fafafa;
-      margin: 0;
-      font-weight: bold;
-      padding: 5px 10px;
-      border-radius: 3px;
-      display: inline-block;
-      min-width: 40%;
-    }
-      .item .name:hover {
-        background: #f6f6f6;
-      }
+  .item .class ul.class_list {
+    margin: 0 0 20px 0;
+  }
 
-    .item .empty_desc {
-      margin: 0 0 5px 0;
-      padding: 0;
-    }
+  .item .name {
+    background: #fafafa;
+    margin: 0;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 3px;
+    display: inline-block;
+    width: 100%;
+  }
 
-    .item .inheritance {
-      margin: 3px 0 0 30px;
-    }
+  .item .name:hover {
+    background: #f6f6f6;
+  }
 
-    .item .inherited {
-      color: #666;
-    }
+  .item .empty_desc {
+    margin: 0 0 5px 0;
+    padding: 0;
+  }
 
-    .item .desc {
-      padding: 0 8px;
-      margin: 0;
-    }
+  .item .inheritance {
+    margin: 3px 0 0 30px;
+  }
 
-      .item .desc p {
-        margin: 0 0 10px 0;
-      }
+  .item .inherited {
+    color: #666;
+  }
 
-    .source_cont {
-      margin: 0;
-      padding: 0;
-    }
+  .item .desc {
+    padding: 0;
+    margin: 0 0 0 1.5em;
+  }
 
-    .source_link a {
-      background: #ffc300;
-      font-weight: 400;
-      font-size: .75em;
-      text-transform: uppercase;
-      color: #fff;
-      text-shadow: 1px 1px 0 #f4b700;
-      
-      padding: 3px 8px;
-      border-radius: 2px;
-      transition: background .3s ease-in-out;
-    }
-      .source_link a:hover {
-        background: #FF7200;
-        text-shadow: none;
-        transition: background .3s ease-in-out;
-      }
+  .item .desc p {
+    margin: 0 0 10px 0;
+  }
 
-    .source {
-      display: none;
-      max-height: 600px;
-      overflow-y: scroll;
-      margin-bottom: 15px;
-    }
+  .source_cont {
+    margin: 0 0 0 1.5rem;
+    padding: 0;
+  }
 
-      .source .codehilite {
-        margin: 0;
-      }
+  .source_link {
+    margin: 0;
+  }
+
+  .source_link a {
+    background: #ffc300;
+    font-weight: 400;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    color: #fff;
+    text-shadow: 1px 1px 0 #f4b700;
+    padding: 3px 8px;
+    border-radius: 2px;
+    transition: background .3s ease-in-out;
+  }
+
+  .source_link a:hover {
+    background: #FF7200;
+    text-shadow: none;
+    transition: background .3s ease-in-out;
+  }
+
+  .source {
+    display: none;
+    margin-bottom: 1rem;
+  } 
+
+  .source pre {
+    max-height: 600px;
+    overflow: auto;
+  }
 
   .desc h1, .desc h2, .desc h3 {
-    font-size: 100% !important;
+    font-size: 1rem !important;
   }
+
   .clear {
     clear: both;
   }
@@ -260,18 +275,22 @@
     #sidebar {
       width: 35%;
     }
+
     #content {
       width: 65%;
     }
   }
+
   @media all and (max-width: 650px) {
     #top {
       display: none;
     }
+
     #sidebar {
       float: none;
       width: auto;
     }
+
     #content {
       float: none;
       width: auto;
@@ -282,13 +301,16 @@
       padding: 0;
       margin-bottom: 15px;
     }
+
     #index ul li {
       display: inline-block;
       margin-right: 30px;
     }
+
     #footer {
       text-align: left;
     }
+
     #footer p {
       display: block;
       margin: inherit;
@@ -366,8 +388,6 @@ audio:not([controls]) {
  *    and Opera.
  * 2. Prevent system color scheme's text color being used in Firefox, IE, and
  *    Opera.
- * 3. Correct text resizing oddly in IE 6/7 when body `font-size` is set using
- *    `em` units.
  * 4. Prevent iOS text size adjust after orientation change, without disabling
  *    user zoom.
  */
@@ -375,30 +395,8 @@ audio:not([controls]) {
 html {
     background: #fff; /* 1 */
     color: #000; /* 2 */
-    font-size: 100%; /* 3 */
     -webkit-text-size-adjust: 100%; /* 4 */
     -ms-text-size-adjust: 100%; /* 4 */
-}
-
-/**
- * Address `font-family` inconsistency between `textarea` and other form
- * elements.
- */
-
-html,
-button,
-input,
-select,
-textarea {
-    font-family: sans-serif;
-}
-
-/**
- * Address margins handled incorrectly in IE 6/7.
- */
-
-body {
-    margin: 0;
 }
 
 /* ==========================================================================
@@ -425,42 +423,6 @@ a:hover {
 /* ==========================================================================
    Typography
    ========================================================================== */
-
-/**
- * Address font sizes and margins set differently in IE 6/7.
- * Address font sizes within `section` and `article` in Firefox 4+, Safari 5,
- * and Chrome.
- */
-
-h1 {
-    font-size: 2em;
-    margin: 0.67em 0;
-}
-
-h2 {
-    font-size: 1.5em;
-    margin: 0.83em 0;
-}
-
-h3 {
-    font-size: 1.17em;
-    margin: 1em 0;
-}
-
-h4 {
-    font-size: 1em;
-    margin: 1.33em 0;
-}
-
-h5 {
-    font-size: 0.83em;
-    margin: 1.67em 0;
-}
-
-h6 {
-    font-size: 0.67em;
-    margin: 2.33em 0;
-}
 
 /**
  * Address styling not present in IE 7/8/9, Safari 5, and Chrome.
@@ -512,56 +474,6 @@ mark {
 }
 
 /**
- * Address margins set differently in IE 6/7.
- */
-
-p,
-pre {
-    margin: 1em 0;
-}
-
-/**
- * Correct font family set oddly in IE 6, Safari 4/5, and Chrome.
- */
-
-code,
-kbd,
-pre,
-samp {
-    font-family: monospace, serif;
-    _font-family: 'courier new', monospace;
-    font-size: 1em;
-}
-
-/**
- * Improve readability of pre-formatted text in all browsers.
- */
-
-pre {
-    white-space: pre;
-    white-space: pre-wrap;
-    word-wrap: break-word;
-}
-
-/**
- * Address CSS quotes not supported in IE 6/7.
- */
-
-q {
-    quotes: none;
-}
-
-/**
- * Address `quotes` property not supported in Safari 4.
- */
-
-q:before,
-q:after {
-    content: '';
-    content: none;
-}
-
-/**
  * Address inconsistent and variable font size in all browsers.
  */
 
@@ -587,45 +499,6 @@ sup {
 
 sub {
     bottom: -0.25em;
-}
-
-/* ==========================================================================
-   Lists
-   ========================================================================== */
-
-/**
- * Address margins set differently in IE 6/7.
- */
-
-dl,
-menu,
-ol,
-ul {
-    margin: 1em 0;
-}
-
-dd {
-    margin: 0 0 0 40px;
-}
-
-/**
- * Address paddings set differently in IE 6/7.
- */
-
-menu,
-ol,
-ul {
-    padding: 0 0 0 40px;
-}
-
-/**
- * Correct list images handled incorrectly in IE 7.
- */
-
-nav ul,
-nav ol {
-    list-style: none;
-    list-style-image: none;
 }
 
 /* ==========================================================================
@@ -667,14 +540,6 @@ figure {
    ========================================================================== */
 
 /**
- * Correct margin displayed oddly in IE 6/7.
- */
-
-form {
-    margin: 0;
-}
-
-/**
  * Define consistent border, margin, and padding.
  */
 
@@ -682,19 +547,6 @@ fieldset {
     border: 1px solid #c0c0c0;
     margin: 0 2px;
     padding: 0.35em 0.625em 0.75em;
-}
-
-/**
- * 1. Correct color not being inherited in IE 6/7/8/9.
- * 2. Correct text not wrapping in Firefox 3.
- * 3. Correct alignment displayed oddly in IE 6/7.
- */
-
-legend {
-    border: 0; /* 1 */
-    padding: 0;
-    white-space: normal; /* 2 */
-    *margin-left: -7px; /* 3 */
 }
 
 /**
@@ -712,16 +564,6 @@ textarea {
     margin: 0; /* 2 */
     vertical-align: baseline; /* 3 */
     *vertical-align: middle; /* 3 */
-}
-
-/**
- * Address Firefox 3+ setting `line-height` on `input` using `!important` in
- * the UA stylesheet.
- */
-
-button,
-input {
-    line-height: normal;
 }
 
 /**
@@ -767,16 +609,12 @@ html input[disabled] {
 /**
  * 1. Address box sizing set to content-box in IE 8/9.
  * 2. Remove excess padding in IE 8/9.
- * 3. Remove excess padding in IE 7.
- *    Known issue: excess padding remains in IE 6.
  */
 
 input[type="checkbox"],
 input[type="radio"] {
     box-sizing: border-box; /* 1 */
     padding: 0; /* 2 */
-    *height: 13px; /* 3 */
-    *width: 13px; /* 3 */
 }
 
 /**
@@ -800,16 +638,6 @@ input[type="search"] {
 input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-decoration {
     -webkit-appearance: none;
-}
-
-/**
- * Remove inner padding and border in Firefox 3+.
- */
-
-button::-moz-focus-inner,
-input::-moz-focus-inner {
-    border: 0;
-    padding: 0;
 }
 
 /**
@@ -843,7 +671,7 @@ table {
    Modify as content requires.
    ========================================================================== */
 
-@media only screen and (min-width: 35em) {
+@media only screen and (min-width: 35rem) {
     /* Style adjustments for viewports that meet the condition */
 }
 

@@ -414,6 +414,7 @@
   % endif
 
   <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro:400,300' rel='stylesheet' type='text/css'>
   <%namespace name="css" file="css.mako" />
   <style type="text/css">
   ${css.pre()}
