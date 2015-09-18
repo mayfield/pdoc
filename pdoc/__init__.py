@@ -707,6 +707,9 @@ class Module (Doc):
         ups = inspect.getmro(cls.cls)
         return list(map(lambda c: self.find_class(c), ups))
 
+    def getclasstree(self, cls):
+        return inspect.getclasstree([cls])
+
     def descendents(self, cls):
         """
         Returns a descendent list of documentation objects for `cls`,
@@ -962,7 +965,7 @@ class Class (Doc):
         the class, sorted alphabetically with `__init__` always coming
         first.
 
-        Unfortunately, this also includes class methods.
+        Unfortunately, this also includes class methods in py2k.
         """
         p = lambda o: (isinstance(o, Function)
                        and o.method

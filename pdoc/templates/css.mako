@@ -1,35 +1,62 @@
 <%def name="pdoc()">
+
+  html {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.5;
+    font-family: "Source Sans Pro", "Helvetica Neueue", Helvetica, sans;
+  }
+
   html, body {
     margin: 0;
     padding: 0;
-    min-height: 100%;
+    height: 100%;
+    background: #fff;
   }
 
-  body {
-    background: #fff;
-    font-family: "Source Sans Pro", "Helvetica Neueue", Helvetica, sans;
-    font-weight: 300;
-    font-size: 16px;
-    line-height: 1.6em;
+  #vert-container {
+    width: 100%;
+    height: 100%;
+  }
+
+  #container {
+    display: flex;
+    width: 100%;
+    max-width: 62em;
+    height: 100%;
+    padding-bottom: 2.2rem; /* footer bumper */
+  }
+
+
+  #sidebar {
+    min-width: 16rem;
+    max-width: 16rem;
+    padding: 0 .5rem .5rem 1.8rem;
+    overflow-y: auto;
+    overflow-wrap: break-word;
+  }
+
+  #sidebar h1 {
+    margin-top: 0;
+  }
+
+  #sidebar ul ul ul {
+    list-style-type: disc;
   }
 
   #content {
-    width: 70%;
-    max-width: 850px;
-    float: left;
-    padding: 30px 60px;
+    padding: 0 3.5em .5em 3.5em; 
     border-left: 1px solid #ddd;
+    overflow: auto;
   }
 
-  #sidebar {
-    width: 25%;
-    float: left;
-    padding: 30px;
-    overflow: hidden;
+  #sidebar,
+  #content {
+    padding-top: 1.8em;
   }
 
   #nav {
-    font-size: 1.3rem;
+    font-size: 1.3em;
     margin: 0 0 15px 0;
   }
 
@@ -43,10 +70,29 @@
   }
 
   #footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
     font-size: 0.75rem;
-    padding: 5px 30px;
+    padding: 0px 30px;
     border-top: 1px solid #ddd;
-    text-align: right;
+    height: 2.2rem;
+  }
+
+  #footer .left {
+    float: left;
+  }
+
+  #footer .right {
+    float: right;
+  }
+
+  #footer .left,
+  #footer .right {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
   }
 
   #footer p {
@@ -56,25 +102,22 @@
 
   h1, h2, h3, h4, h5 {
     font-weight: 300;
+    margin: 0 0 0.625rem 0;
   }
 
   h1 {
     font-size: 2.5rem;
-    line-height: 1.1rem;
-    margin: 0 0 0.50rem 0;
   }
 
   h2 {
     font-size: 2rem;
-    margin: 1rem 0 0.50rem 0;
   }
 
   h3 {
-    margin: 1.5rem 0 0.625rem 0;
+    font-size: 1.75rem;
   }
 
   h4 {
-    margin: 0;
     font-size: 1.05rem;
   }
 
@@ -94,8 +137,8 @@
   }
 
   .section-title {
-    margin-top: 1.75rem;
-    padding: 0.875rem 0; 
+    padding: 0.5em 0; 
+    margin-top: 0.5em;
   }
 
   .ident {
@@ -115,9 +158,9 @@
   }
 
   .codehilite {
-    margin: 0 1.875rem 0.625rem 0;
+    margin: 0 0 0.625rem 0;
     font-size: 0.75rem;
-    line-height: 1rem;
+    line-height: normal; /* XXX */
   }
 
   .codehilite pre {
@@ -178,12 +221,21 @@
   }
 
   #index ul {
-    margin: 0;
+    margin: 0 0 1rem 0;
+    padding-left: 1.25em;
   }
 
-  .item,
+  #index li {
+    padding: 0.125em 0;
+  }
+
+  .item {
+    margin: 0 0 2em 0;
+    padding-left: 1em;
+  }
+
   .item .class {
-    margin: 0 0 1rem 1rem;
+    margin: 1em 0 2em 0.5em;
   }
 
   .item .class ul.class_list {
@@ -202,6 +254,22 @@
 
   .item .name:hover {
     background: #f6f6f6;
+  }
+
+  .item .name:target {
+    animation: highlight_anchor 3s ease;  
+  }
+  
+  @keyframes highlight_anchor {
+    0% {
+      background: #fafafa;
+    }
+    33% {
+      background: #ffc300;
+    }
+    100% {
+      background: #fafafa;
+    }
   }
 
   .item .empty_desc {
@@ -271,49 +339,38 @@
     clear: both;
   }
 
-  @media all and (max-width: 950px) {
-    #sidebar {
-      width: 35%;
-    }
-
-    #content {
-      width: 65%;
-    }
-  }
-
   @media all and (max-width: 650px) {
-    #top {
+    #sidebar {
       display: none;
     }
 
-    #sidebar {
-      float: none;
-      width: auto;
-    }
-
     #content {
-      float: none;
-      width: auto;
-      padding: 30px;
+      /*width: 100%;*/
     }
+  }
 
-    #index ul {
-      padding: 0;
-      margin-bottom: 15px;
+
+  @media all and (max-width: 450px) {
+    html {
+      font-size: 12px;
     }
+  }
 
-    #index ul li {
-      display: inline-block;
-      margin-right: 30px;
+  @media all and (max-width: 500px) and (min-width: 450px) {
+    html {
+      font-size: 13px;
     }
+  }
 
-    #footer {
-      text-align: left;
+  @media all and (max-width: 550px) {
+    html {
+      font-size: 14px;
     }
+  }
 
-    #footer p {
-      display: block;
-      margin: inherit;
+  @media all and (max-width: 600px) {
+    html {
+      font-size: 15px;
     }
   }
 
